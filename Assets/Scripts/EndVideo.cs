@@ -16,6 +16,6 @@ public class EndVideo : MonoBehaviour
         yield return new WaitForSeconds(5);
         loadingScreen.SetActive(true);
         StartCoroutine(loadingP.LoadAsynce());
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("menu");
     }
 }

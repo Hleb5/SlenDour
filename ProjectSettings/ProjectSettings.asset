@@ -161,6 +161,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.KIplEndres.BETATESTSlenDour2TheVillage
+    Standalone: com.KIplEndres.BETA-TEST-SlenDour-2--The-Village
   buildNumber:
     Bratwurst: 0
     Standalone: 0
@@ -252,7 +253,7 @@ PlayerSettings:
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
-  useCustomMainGradleTemplate: 0
+  useCustomMainGradleTemplate: 1
   useCustomLauncherGradleManifest: 0
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0

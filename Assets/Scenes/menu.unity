@@ -1546,6 +1546,9 @@ MonoBehaviour:
   player2: {fileID: 0}
   slider: {fileID: 0}
   textPercent: {fileID: 0}
+  Low: {fileID: 0}
+  Medium: {fileID: 0}
+  High: {fileID: 0}
 --- !u!114 &830478528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,7 +1561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e02042cdb2c3534b95585bb6d2ecbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: 2
+  loadLevel: 3
 --- !u!82 &830478529
 AudioSource:
   m_ObjectHideFlags: 0
