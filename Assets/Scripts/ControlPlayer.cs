@@ -16,6 +16,7 @@ public class ControlPlayer : MonoBehaviour
     private Animator camAnim;
     private AudioSource source;
     public Animation cameraPl;
+    public Animation flashlightAnim;
 
     public int sensitivityX;
 
@@ -46,10 +47,12 @@ public class ControlPlayer : MonoBehaviour
         if(joystick._isDragging == true)
         {
             cameraPl.GetComponent<Animation>().Play("Walk");
+            flashlightAnim.GetComponent<Animation>().Play("Flashlight");
         }
         else
         {
             cameraPl.GetComponent<Animation>().Stop();
+            flashlightAnim.GetComponent<Animation>().Stop();
         }
     }
 }
