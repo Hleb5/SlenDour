@@ -29,6 +29,7 @@ public class SlenderAI : MonoBehaviour
     public float teleportDelay = 3.0f;
     private float teleportTimer = 0.0f;
     private Rigidbody rigidBody;
+    public GameObject zvukpoiman;
 
     void Start()
     {
@@ -67,7 +68,7 @@ public class SlenderAI : MonoBehaviour
             h2.SetActive(false);
             g.SetActive(false);
             briefcase.SetActive(false);
-            GetComponent<AudioSource>().PlayOneShot(poiman);
+            zvukpoiman.GetComponent<AudioSource>().PlayOneShot(poiman);
             StartCoroutine(menu());
         }
     }
@@ -75,7 +76,7 @@ public class SlenderAI : MonoBehaviour
     IEnumerator menu()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene(2);
     }
 
     void OnTriggerEnter(Collider other)
