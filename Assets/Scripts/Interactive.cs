@@ -20,12 +20,12 @@ public class Interactive : MonoBehaviour
     public GameObject noteHistory;
     public GameObject noteHistoryButton;
     public GameObject noteHistory1, noteHistory2, noteHistory3, noteHistory4, noteHistory5, noteHistory6, noteHistory7;
-    public GameObject noteHistory1Button, noteHistory2Button, noteHistory3Button, noteHistory4Button, noteHistory5Button, noteHistory6Button, noteHistory7Button;
+    public GameObject noteHistory1Button, noteHistory2Button, noteHistory3Button, noteHistory4Button, noteHistory5Button, noteHistory6Button, noteHistory7Button, mapButton;
     public GameObject noteHistory1GT, noteHistory2GT, noteHistory3GT, noteHistory4GT, noteHistory5GT, noteHistory6GT, noteHistory7GT;
     public GameObject slendrinaCoffin, slendrinaPlayer;
     public GameObject slendrinaButton;
     public GameObject briefcase;
-    public GameObject briefcaseNotes1, briefcaseNotes2, briefcaseNotes3, briefcaseNotes4, briefcaseNotes5, briefcaseNotes6, briefcaseNotes7;
+    public GameObject briefcaseNotes1, briefcaseNotes2, briefcaseNotes3, briefcaseNotes4, briefcaseNotes5, briefcaseNotes6, briefcaseNotes7, mapUi, mapGameObject, eTextMap;
     public GameObject buttonBriefcase1;
     public GameObject loadingS;
     public GameObject develop;
@@ -109,6 +109,7 @@ public class Interactive : MonoBehaviour
             slendrinaButton.SetActive(false);
             eTextHouse.SetActive(false);
             eTextGrob.SetActive(false);
+            eTextMap.SetActive(false);
         }
         if (hit.transform == null)
         {
@@ -127,7 +128,7 @@ public class Interactive : MonoBehaviour
             slendrinaButton.SetActive(false);
             eTextHouse.SetActive(false);
             eTextGrob.SetActive(false);
-            cursorImage.SetActive(true);
+            eTextMap.SetActive(false);
         }
     }
 
@@ -196,6 +197,10 @@ public class Interactive : MonoBehaviour
         if(hit.transform.gameObject.tag == "slendrina")
         {
             slendrinaButton.SetActive(true);
+        }
+        if(hit.transform.gameObject.tag == "map")
+        {
+            eTextMap.SetActive(true);
         }
     }
 
@@ -413,12 +418,28 @@ public class Interactive : MonoBehaviour
     {
         briefcase.SetActive(true);
         buttonBriefcase1.SetActive(false);
+        mapButton.SetActive(false);
     }
 
     public void CloseBriefcase()
     {
         briefcase.SetActive(false);
         buttonBriefcase1.SetActive(true);
+        mapButton.SetActive(true);
+    }
+
+    public void OpenMap()
+    {
+        mapUi.SetActive(true);
+        mapButton.SetActive(false);
+        buttonBriefcase1.SetActive(false);
+    }
+
+    public void CloseMap()
+    {
+        mapUi.SetActive(false);
+        mapButton.SetActive(true);
+        buttonBriefcase1 .SetActive(true);
     }
 
     public void TakeHistoryBriefcase1()
@@ -454,6 +475,12 @@ public class Interactive : MonoBehaviour
     public void TakeHistoryBriefcase7()
     {
         noteHistory7.SetActive(true);
+    }
+
+    public void TakeMap()
+    {
+        mapGameObject.SetActive(false);
+        mapButton.SetActive(true);
     }
 
     public void InMenu()

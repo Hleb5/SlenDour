@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - noteHistory5
+  - noteHistory2
+  - noteHistory3
+  - house
+  - Door
+  - noteHistory1
+  - noteHistory6
+  - noteHistory
+  - noteHistory7
+  - noteHistory4
+  - Characters
+  - grob
+  - slendrina
+  - KeyGrob
+  - map
   layers:
   - Default
   - TransparentFX
